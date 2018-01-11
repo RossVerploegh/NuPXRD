@@ -1,4 +1,7 @@
+"""NuMat's Powder X-ray Diffraction Module.
 
+This module is used to convert .dat files into human readable formats (csv files, plots, etc.)
+"""
 
 class NuPXRD(object):
     """
