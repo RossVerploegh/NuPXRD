@@ -8,5 +8,5 @@ setup(
   author_email = 'ross@numat-tech.com',
   url = 'https://github.com/RossVerploegh/nupxrd', # use the URL to the github repo
   download_url = 'https://github.com/RossVerploegh/nupxrd/archive/0.1.tar.gz', # I'll explain this in a second
-  keywords = ['powder XRD, 'MOF', 'NuMat'], # arbitrary keywords
+  keywords = ['powder XRD', 'MOF', 'NuMat'], # arbitrary keywords
   classifiers = [],
