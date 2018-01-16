@@ -1,3 +1,33 @@
+Bundle,1
+Partition,1
+Operator,N.U. X-ray Dif. Fac
+Gonio,ATX-G
+Memo,J.B. Cohen X-ray Diffraction Facility
+IncidentMonochro,Slit collimation
+CounterMonochro,Receiving slit
+Attachment,XY-STAGE
+Filter,
+SlitName0,XRR Compression
+SlitName1,Reciprocal SM Slit Collimation
+Counter,SC-70
+KAlpha1,1.54056
+KAlpha2,1.54439
+KBata,0
+Target,Cu
+KV,50
+mA,240
+AxisName,2Theta
+MeasurementMethod,Continuation
+Start,2
+Finish,30
+Speed,10
+FixedTime,
+Width,0.01
+FullScale,11800
+Comment,
+SampleName,
+Xunit,deg.
+Yunit,CPS
 2.0,600.4
 2.01,683.8
 2.02,750.6

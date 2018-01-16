@@ -1,9 +1,11 @@
 """NuMat's Powder X-ray Diffraction Module.
 
-This module is used to convert .dat files into human readable formats (csv files, plots, etc.)
+This module is used to convert .dat files into human readable formats (csv file
+s, plots, etc.)
 """
 
 import os
+
 
 class NuPXRD(object):
     """
@@ -17,12 +19,12 @@ class NuPXRD(object):
 
         Args:
             path - Path of PXRD DAT file, as a string.
-            data - Empty list.
             mofname - Name of the MOF, as a string.
+            data - Empty list.
         """
         self.path = path
+        self.mofname = os.path.basename(path).split(".")[0]
         self.data = data
-        self.mofname = os.path.basename(path).split('.')[0]
 
     def read_pxrd(self):
         """Parses a PXRD DAT file.
@@ -39,8 +41,11 @@ class NuPXRD(object):
                 if ";" not in row:
                     tmplist = [row.split()[0], row.split()[1]]
                     data.append(list(map(float, tmplist)))
+                elif ";" in row:
+                    tmplist = [row.split()[0].replace(";", ""),
+                               " ".join(row.split()[2::])]
+                    data.append(list(map(str, tmplist)))
         self.data = data
-        return self.data
 
     def write_csv(self):
         """Writes a csv file.
@@ -51,9 +56,9 @@ class NuPXRD(object):
             A csv file.
         """
         with open('output_'+str(self.mofname)+'.csv', 'w') as output_file:
-            for datum in self.data:
-                datum = list(map(str, datum))
-                output_file.write(",".join(datum)+"\n")
+            output_file.write("\n".join(",".join(list(map(str, datum)))
+                              for datum in self.data))
+
 
 if __name__ == '__main__':
-    print ("NuPXRD")
+    NuPXRD()
