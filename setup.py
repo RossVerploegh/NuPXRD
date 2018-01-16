@@ -18,8 +18,6 @@ setup(name='nupxrd',
                    "Natural Language :: English",
                    "Programming Language :: Python",
                    "Programming Language :: Python :: 3",
-                   "Topic :: Scientific/Engineering :: Human Machine\
-                   Interfaces",
                    "Topic :: Scientific/Engineering :: Chemistry"
                    ]
       )
