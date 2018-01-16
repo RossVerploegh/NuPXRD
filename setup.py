@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 setup(
   name = 'nupxrd',
   packages = ['nupxrd'], # this must be the same as the name above
