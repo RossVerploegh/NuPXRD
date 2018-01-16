@@ -48,7 +48,7 @@ class NuPXRD(object):
         Args:
             self.
         Returns:
-            A nested list of the form [[x1, y1], [x2, y2], ...].
+            A csv file.
         """
         with open('output_'+str(self.mofname)+'.csv', 'w') as output_file:
             for datum in self.data:
