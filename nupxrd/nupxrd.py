@@ -14,7 +14,7 @@ class NuPXRD(object):
         data - empty list
     """
 
-    def __init__(self, path, mofname='', data=[]):
+    def __init__(self, path, data=[]):
         """Returns a NuPXRD object.
 
         Args:
@@ -23,7 +23,7 @@ class NuPXRD(object):
             data - Empty list.
         """
         self.path = path
-        self.mofname = os.path.basename(path).split(".")[0]
+        self.mof_name = os.path.basename(path).split(".")[0]
         self.data = data
 
     def read_pxrd(self):
@@ -37,7 +37,6 @@ class NuPXRD(object):
         data = []
         with open(self.path) as in_file:
             for row in in_file:
-                # Assignment - fill in the `data` variable
                 if ";" not in row:
                     tmplist = [row.split()[0], row.split()[1]]
                     data.append(list(map(float, tmplist)))
